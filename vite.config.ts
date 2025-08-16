@@ -80,13 +80,13 @@ export default ({ mode }: {mode: never}) => {
             },
           ],
           favicon: {
-            path: "public/favicon.svg",
+            path: "public/favicon.ico",
             size: 48,
           },
         }),
         VitePWA({
           registerType: "autoUpdate",
-          includeAssets: ['favicon.svg'],
+          includeAssets: ['favicon.ico'],
           manifest: {
             "short_name": VITE_APP_NAME,
             "name": VITE_APP_NAME,
@@ -114,7 +114,7 @@ export default ({ mode }: {mode: never}) => {
                   purpose: 'maskable'
                 }
             ],
-            "start_url": ".",
+            "start_url": "/little-gitster-girl/",
             "display": "standalone",
             "theme_color": "#000000",
             "background_color": "#ffffff"
