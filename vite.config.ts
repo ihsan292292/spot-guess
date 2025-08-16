@@ -20,7 +20,7 @@ export default ({ mode }: {mode: never}) => {
   } = loadEnv(mode, process.cwd());
 
   return defineConfig({
-      base: "/little-gitster-girl",
+      base: "/little-gitster-girl/",
       build: {
         sourcemap: true,
         rollupOptions: {
