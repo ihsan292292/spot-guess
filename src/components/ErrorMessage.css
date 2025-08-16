@@ -1,0 +1,5 @@
+.centered-error {
+    text-align: center;
+    color: var(--error-color); /* Dark red for error text */
+    font-size: 1.5rem;
+  }

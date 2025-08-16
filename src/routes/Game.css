@@ -1,0 +1,126 @@
+.game {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.request-permissions-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--button-text-color);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.request-permissions-btn:hover {
+    background-color: var(--button-color-hover);
+    transform: translateY(-2px);
+}
+
+/* .game-main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.game-main-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px
+}
+
+.qr-reader-container {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    aspect-ratio: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    max-height: calc(100vh - 2*10px - 1em - 56px - 38.5px - 20px);
+    /* width: 200px;
+    height: 200px; */
+}
+
+.qr-reader-container > div {
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.play-pause-btn-wrapper {
+
+}
+
+.play-pause-btn-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-radius: 50%;
+    /* background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.05) 80%
+    ); */
+    z-index: 1;
+    will-change: "box-shadow",
+}
+
+.play-pause-btn-wrapper.playing::before {
+    /* transform: scale(1.3); */
+    height: 140px;
+    width: 140px;
+    transition: all 0.4s ease-in-out;
+    box-shadow:  0 0 15px rgba(255, 255, 255, 0.5),
+                0 0 30px rgba(255, 255, 255, 0.4),
+                0 0 45px rgba(255, 255, 255, 0.3),
+                inset 0 0 10px rgba(255, 255, 255, 0.2)     
+}
+
+.play-pause-btn-wrapper.paused::before {
+    transition: all 1.5s ease-in-out;
+    /* transform: scale(1); */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
+                0 0 10px rgba(255, 255, 255, 0.3),
+                0 0 15px rgba(255, 255, 255, 0.2),
+                inset 0 0 3px rgba(255, 255, 255, 0.1)   
+}
+
+.game-main-section__next-song-btn {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.game-main-section__next-song-btn button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--button-text-color);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-main-section__next-song-btn button:hover {
+    background-color: var(--button-color-hover);
+}

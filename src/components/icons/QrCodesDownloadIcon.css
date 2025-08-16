@@ -1,0 +1,19 @@
+.button-wrapper {
+    padding: 15px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.4s ease;
+    background-color: var(--button-color);
+}
+
+.button-wrapper:hover {
+    background-color: var(--button-color-hover);
+}
+
+.button-text {
+    color: var(--button-text-color);
+    padding-left: 5px;
+}

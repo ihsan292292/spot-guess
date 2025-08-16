@@ -1,0 +1,60 @@
+.equalizer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  position: relative;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.equalizer-bars {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    gap: 10px;
+    padding: 0px 30px;
+}
+
+.equalizer-bars.bars-top {
+    align-items: flex-end;
+    bottom: 50%;
+    margin-bottom: 5px;
+}
+.equalizer-bars.bars-bottom {
+    align-items: flex-start;
+    top: 50%;
+    margin-top: 5px;
+}
+
+.equalizer-bar {
+  /* width: 10px; */
+  height: 100%;
+  flex-grow: 1;
+  transition: all 0.1s ease-in-out;
+}
+
+.equalizer-bar.top {
+    border-radius: 5px 5px 0px 0px;
+    /* border: solid 1px var(--border-color); */
+    background: linear-gradient(180deg, var(--text-color), 10%, var(--primary-color));
+    transform-origin: bottom center;
+}
+.equalizer-bar.reflection {
+    border-radius: 0px 0px 5px 5px;
+    background: linear-gradient(180deg, var(--primary-color), 90%, var(--text-color));
+    opacity: 0.2;
+    transform-origin: top center;
+}
+
+.equalizer-bar.paused {
+  transition: all 1.5s ease-in-out;
+  /* opacity: 0.7; */
+}

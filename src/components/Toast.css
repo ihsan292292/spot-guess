@@ -1,0 +1,32 @@
+.toast-container {
+    position: fixed;
+    top: 60px; /* Navbar height!! */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%; 
+    max-width: 400px;
+}
+
+.toast {
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.toast-success {
+    background-color: var(--success-color)
+}
+
+.toast-error {
+    background-color: var(--error-color)
+}
+
+.toast-info {
+    background-color: var(--info-color)
+}

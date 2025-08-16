@@ -1,0 +1,16 @@
+.spinner {
+    display: inline-block;
+    border: 4px solid;
+    border-radius: 50%;
+    animation: spin infinite linear;
+    margin: auto;  /* Optional centering if needed */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,41 @@
+/* NeonSign.css */
+.neon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.neon-text {
+    --base-font-size: 3rem;
+    --neon-text-color: #fff;
+    --neon-text-shadow-color: #f40;
+    --neon-border-color: #fff;
+    --neon-border-shadow-color: #08f;
+    --neon-text-shadow-size: 1 text-align: center;
+    font-size: var(--base-font-size);
+    font-weight: 200;
+    color: var(--neon-text-color);
+    font-family: 'NEON LED Light', sans-serif;
+    text-transform: uppercase;
+    padding: calc(var(--base-font-size) * 0.45) calc(var(--base-font-size) * 0.5) calc(var(--base-font-size) * 0.35)
+        calc(var(--base-font-size) * 0.5);
+    border: 0.4rem solid var(--neon-border-color);
+    border-radius: 2rem;
+    text-shadow:
+        calc(var(--base-font-size) * -0.05) calc(var(--base-font-size) * -0.05) calc(var(--base-font-size) * 0.25)
+            var(--neon-text-color),
+        calc(var(--base-font-size) * -0.05) calc(var(--base-font-size) * -0.05) calc(var(--base-font-size) * 0.25)
+            var(--neon-text-color),
+        0 0 calc(var(--base-font-size) * 0.2) var(--neon-text-shadow-color),
+        0 0 calc(var(--base-font-size) * 0.4) var(--neon-text-shadow-color),
+        0 0 calc(var(--base-font-size) * 0.6) var(--neon-text-shadow-color),
+        0 0 calc(var(--base-font-size) * 0.8) var(--neon-text-shadow-color),
+        0 0 calc(var(--base-font-size) * 0.9) var(--neon-text-shadow-color);
+    box-shadow:
+        0 0 0.5rem var(--neon-border-color),
+        inset 0 0 0.5rem var(--neon-border-color),
+        0 0 2rem var(--neon-border-shadow-color),
+        inset 0 0 2rem var(--neon-border-shadow-color),
+        0 0 4rem var(--neon-border-shadow-color),
+        inset 0 0 4rem var(--neon-border-shadow-color);
+}

@@ -1,0 +1,50 @@
+{
+  "name": "little-gitster-girl",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:https": "VITE_HTTPS=true vite --host",
+    "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
+    "build:sentry": "SENTRY_PLUGIN_ENABLED=true build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "preview:https": "VITE_HTTPS=true vite preview --host",
+    "test": "vitest",
+    "generate-certs": "node scripts/generate-certs-windows.js",
+    "generate-certs-original": "mkdir -p generated/certs && echo \"[req]\\ndistinguished_name=req\\n[ext]\\nsubjectAltName=DNS:localhost,DNS:Florian-Air.fritz.box\" > generated/certs/san.cnf && openssl genpkey -algorithm RSA -out generated/certs/private.key -pkeyopt rsa_keygen_bits:2048 && openssl req -new -key generated/certs/private.key -out generated/certs/csr.csr -subj \"/CN=NAME-Air.fritz.box\" -config generated/certs/san.cnf && openssl x509 -req -in generated/certs/csr.csr -signkey generated/certs/private.key -out generated/certs/certificate.crt -days 365 -extfile generated/certs/san.cnf -extensions ext && rm generated/certs/san.cnf generated/certs/csr.csr"
+  },
+  "dependencies": {
+    "@sentry/react": "^9.0.0",
+    "@spotify/web-api-ts-sdk": "^1.2.0",
+    "@types/subset-font": "^2.3.0",
+    "jspdf": "^3.0.1",
+    "qr-scanner": "^1.4.2",
+    "qrcode-generator": "^1.5.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@sentry/vite-plugin": "^4.0.2",
+    "@types/node": "^22.17.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/spotify-web-playback-sdk": "^0.1.19",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.32.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "rollup-plugin-visualizer": "^6.0.3",
+    "sharp": "0.34.3",
+    "subset-font": "^2.4.0",
+    "typescript": "~5.8.0",
+    "typescript-eslint": "^8.38.0",
+    "vite": "^7.0.6",
+    "vite-plugin-pwa": "^1.0.2",
+    "vitest": "^3.2.4"
+  }
+}

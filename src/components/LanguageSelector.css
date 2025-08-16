@@ -1,0 +1,34 @@
+.language-selector-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    width: 200px;
+    font-family: Arial, sans-serif;
+}
+
+.language-label {
+    font-size: 1em;
+}
+
+.language-select {
+    color: var(--text-color);
+    padding: 4px 8px;
+    font-size: 1em;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.language-select:focus {
+    border-color: #007bff;
+}
+
+.language-select option {
+    padding: 8px;
+}
