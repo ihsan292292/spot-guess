@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { visualizer } from "rollup-plugin-visualizer";
 import { displayNetworkUrlWithHostnamePlugin } from './config/vite-plugins/vite-display-network-url-hostname-plugin';
 import { selfSignedHttpsSupportPlugin } from './config/vite-plugins/vite-self-signed-https-support-plugin';
-import { pwaImageGenPlugin } from './config/vite-plugins/vite-pwa-image-gen-plugin';
+// import { pwaImageGenPlugin } from './config/vite-plugins/vite-pwa-image-gen-plugin';
 import {fontSubsetPlugin} from './config/vite-plugins/vite-custom-font-subset-base64';
 
 const isSentryDisabled = !(process.env.SENTRY_PLUGIN_ENABLED == "true")
@@ -57,33 +57,33 @@ export default ({ mode }: {mode: never}) => {
         }),
         displayNetworkUrlWithHostnamePlugin(),
         selfSignedHttpsSupportPlugin(),
-        pwaImageGenPlugin({
-          outputDir: "public",
-          images: [
-            {
-              path: "assets/logo_512x512.png",
-              transparent: {
-                sizes: [64, 192, 512],
-              },
-              maskable: {
-                sizes: [512],
-              },
-              apple: {
-                sizes: [512],
-              },
-              options: {
-                maskable: {
-                  padding: 0.0,
-                  resizeOptions: { fit: "contain", background: "white" },
-                },
-              }
-            },
-          ],
-          favicon: {
-            path: "public/favicon.ico",
-            size: 48,
-          },
-        }),
+        // pwaImageGenPlugin({
+        //   outputDir: "public",
+        //   images: [
+        //     {
+        //       path: "assets/logo_512x512.png",
+        //       transparent: {
+        //         sizes: [64, 192, 512],
+        //       },
+        //       maskable: {
+        //         sizes: [512],
+        //       },
+        //       apple: {
+        //         sizes: [512],
+        //       },
+        //       options: {
+        //         maskable: {
+        //           padding: 0.0,
+        //           resizeOptions: { fit: "contain", background: "white" },
+        //         },
+        //       }
+        //     },
+        //   ],
+        //   favicon: {
+        //     path: "public/favicon.ico",
+        //     size: 48,
+        //   },
+        // }),
         VitePWA({
           registerType: "autoUpdate",
           includeAssets: ['favicon.ico'],
